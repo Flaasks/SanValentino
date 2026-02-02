@@ -1,0 +1,109 @@
+:root {
+  color-scheme: light;
+  font-family: "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --bg: #fff6f8;
+  --card: #ffffff;
+  --accent: #ff4d6d;
+  --accent-dark: #e5395b;
+  --text: #2b2b2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #fff0f5, #ffe6ef);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  margin-left: 16px;
+  font-weight: 500;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 720px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(255, 77, 109, 0.15);
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.button-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+button,
+.button-link {
+  border: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(255, 77, 109, 0.25);
+  text-decoration: none;
+}
+
+button.secondary,
+.button-link.secondary {
+  background: #f1f1f1;
+  color: #4a4a4a;
+  box-shadow: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0 28px;
+  font-size: 0.95rem;
+}
+
+.heart {
+  color: var(--accent-dark);
+  font-size: 1.4rem;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 28px;
+  }
+}
